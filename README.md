@@ -5,3 +5,4 @@ React Router v6
 zxcvbn for password strength  
 Formik library to handle form   
 Private Routes  
+Context API for global state management  
