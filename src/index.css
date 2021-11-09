@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.app{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.app__image{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.app__image:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg,#e91e63,#03a9f4);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.app__image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app__form__main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.app__form__main .app__form__box{
+  width: 50%;
+}
+
+.app__form__main .app__form__box h2{
+  color: #607d8b;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #ff4584;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.app__form__main .app__form__box .app__form__input{
+  margin-bottom: 20px;
+}
+
+.app__form__main .app__form__box .app__form__input span{
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #607d8b;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.app__form__main .app__form__box .app__form__input input{
+ width: 100%;
+ padding: 10px 20px;
+ outline: none;
+ font-weight: 400;
+ border: 1px solid #607d8b;
+ font-size: 16px;
+ letter-spacing: 1px;
+ color: #607d8b;
+ background: transparent;
+ border-radius: 30px; 
+}
+
+.app__form__main .app__form__box .app__form__input button{
+ padding: 10px 20px;
+ outline: none;
+ font-weight: 400;
+ border: 1px solid #607d8b;
+ font-size: 16px;
+ letter-spacing: 1px;
+ color: #607d8b;
+ background: transparent;
+ border-radius: 30px; 
+ cursor: pointer;
+}
+
+.app__form__main .app__form__box .app__form__input button:hover{
+  background: #f53677;
+}
+
+.error__messages{
+  color: crimson;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.dashboard{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.dashboard .card{
+  border: 1px solid #ddd;
+  padding: 10rem;
+  margin: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dashboard .card__body button{
+ padding: 10px 20px;
+ outline: none;
+ font-weight: 400;
+ border: 1px solid #607d8b;
+ font-size: 16px;
+ letter-spacing: 1px;
+ color: #607d8b;
+ background: transparent;
+ border-radius: 30px; 
+ cursor: pointer;  
+}
+
+.dashboard .card__body button:hover{
+  background: #f53677;
+  color: #fff;
+}
+
+@media(max-width: 768px){
+  .app .app__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .app__form__main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .app__form__main .app__form__box{
+    width: 100%;
+    padding: 40px;
+    background: rgb(255 255 255 / 0.9);
+    margin: 50px;
+  }
+  .dashboard{
+    font-size: 10px;
+  }
+  .dashboard .card{
+    padding: 10px;
+    margin: 15px;
+  }
+}
+
